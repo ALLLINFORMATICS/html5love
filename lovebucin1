@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Bucin Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="animation-container">
+    <h1 class="animated-text">Love Bucin</h1>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff758c, #ff7eb3);
+  font-family: 'Arial', sans-serif;
+}
+
+.animation-container {
+  text-align: center;
+}
+
+.animated-text {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation: colorChange 3s infinite, pulse 2s infinite;
+}
+
+@keyframes colorChange {
+  0% { color: #ff758c; }
+  50% { color: #ffe29f; }
+  100% { color: #ff758c; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+// Optional: Add interactivity for clicks or hover effects
+document.querySelector('.animated-text').addEventListener('click', () => {
+  alert('For Desiyanaa!');
+});
